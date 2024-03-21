@@ -17,6 +17,7 @@ def get_options(cols):
 
 
 def main():
+    st.set_page_config(page_title="Quick Machine Learning")
     st.title("Quick Machine Learning")
     st.container(height=10, border=False)
 
