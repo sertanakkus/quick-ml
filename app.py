@@ -40,8 +40,15 @@ def main():
 
         if st.button("Start"):
             result = Algorithms.apply(algorithm, target)
-
-            st.write(result)
+            if result == "error":
+                st.error(
+                    """It seems like you are trying to fit a classifier, which expects discrete classes on a regression target with continuous values.
+                    Please choose one of the following algorithms. \n
+                        -> Linear Regression  -> Decision Tree Regressor  -> Random Forest Regressor
+                    """
+                )
+            else:
+                st.write(result)
 
 
 algorithm_list = {

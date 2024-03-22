@@ -59,5 +59,5 @@ class Algorithms:
                 "score": score,
             }
 
-        except Exception as e:
-            return {f"error: {e}"}
+        except Exception:
+            return "error"
